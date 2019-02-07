@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contact_smart_shoes</title>
+	<link rel="stylesheet" href={% static 'server/css/master.css' %}>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <menu>
+                <div class="flex-header">
+                    <div class="flex_logo"><img src="/static/img/6_Primary_logo_on_color2_291x67.png" alt="logo"></div>
+                    <div><a href = "/">Главная</a></div>
+					<div><a href = "/catalog/">Каталог</a></div>
+					<div><a href= "/contact/">Контакты</a></div>
+                </div>
+            </menu>
+        </header>
+
+        {% block page_content %}
+        {% endblock %}
+
+    <hr>
+
+    <footer>
+        <p>&copy; Все права защищены</p>
+    </footer>
+    </div>
+</body>
+</html>

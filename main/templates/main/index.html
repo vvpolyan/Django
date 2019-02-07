@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Main_smart_shoes</title>
-	<link rel="stylesheet" href="./static/css/style.css">
-</head>
-<body>
-	<div class="container">
-		<header>
-			<menu>
-				<div class="flex-header">
-					<div class="flex_logo"><img src="/static/img/6_Primary_logo_on_color2_291x67.png" alt="logo"></div>
-            		<div><a href = "/">Главная</a></div>
-					<div><a href = "/catalog/">Каталог</a></div>
-					<div><a href= "/contact/">Контакты</a></div>
-        		</div>
-        	</menu>
-		</header>
+{% extends 'server/master_index.html' %}
 
-		<hr>
-	
+{% block page_content %}
+
 		<main>
 			<h1>
 				Главная страница интернет-магазина <br>
@@ -34,6 +16,9 @@
 
 			<p class="text">
 				<span>Приветственное слово:</span><br>
+				<span class="username">
+					Привет {{ name }}!
+				</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta vel, commodi laudantium officiis ipsum est aliquid dolore omnis, facilis molestiae dicta ipsam aperiam corporis minima mollitia iusto voluptatibus asperiores nemo.<br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, maxime provident suscipit ab! Veritatis blanditiis, nemo aliquid hic excepturi praesentium debitis explicabo temporibus repudiandae minus cum ducimus odit atque laborum!<br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id soluta, saepe. Doloremque repudiandae dignissimos perferendis alias quas! Recusandae cupiditate, et vel explicabo distinctio ullam? Possimus natus, numquam neque eligendi assumenda.<br>
@@ -43,11 +28,4 @@
 			</p>
 		</main>
 
-		<hr>
-
-		<footer>
-			<p>&copy; Все права защищены</p>
-		</footer>
-	</div>
-</body>
-</html>
+{% endblock %}

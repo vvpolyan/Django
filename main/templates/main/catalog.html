@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Catalog_smart_shoes</title>
-	<link rel="stylesheet" href="./static/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <menu>
-                <div class="flex-header">
-                    <div class="flex_logo"><img src="/static/img/6_Primary_logo_on_color2_291x67.png" alt="logo"></div>
-                    <div><a href = "/">Главная</a></div>
-					<div><a href = "/catalog/">Каталог</a></div>
-					<div><a href= "/contact/">Контакты</a></div>
-                </div>
-            </menu>
-        </header>
+{% extends 'server/master.html' %}
+
+{% block page_content %}
 
     <main>
+        <span class="branding__snippet">
+            {{ about_text }}
+        </span>
         <h1>Каталог</h1>
         <div class="catalog">
            <div>
@@ -57,11 +44,4 @@
             
     </main>
 
-    <hr>
-
-    <footer>
-        <p>&copy; Все права защищены</p>
-    </footer>
-    </div>
-</body>
-</html>
+{% endblock %}

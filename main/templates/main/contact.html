@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Contact_smart_shoes</title>
-	<link rel="stylesheet" href="./static/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <menu>
-                <div class="flex-header">
-                    <div class="flex_logo"><img src="/static/img/6_Primary_logo_on_color2_291x67.png" alt="logo"></div>
-                    <div><a href = "/">Главная</a></div>
-					<div><a href = "/catalog/">Каталог</a></div>
-					<div><a href= "/contact/">Контакты</a></div>
-                </div>
-            </menu>
-        </header>
+{% extends 'server/master.html' %}
+
+{% block page_content %}
 
     <main>
         <h1>Напишите нам:</h1>
@@ -38,18 +22,20 @@
             </fieldset>
         </form>
         <h1>Наш адрес:</h1>
+
+
+
 		<p>350000, г. Краснодар</p>
 		<p>ул. Красная, д. 108, стр. 1, оф. 13</p>
 		<iframe src="https://yandex.ru/map-widget/v1/-/CBqGzNWbgD" frameborder="0"></iframe><br>
-		<p>Телефон: +7 (861) 000-00-00</p>
-		<p>E-mail: smart_shoes@net.ru</p>
+        <ul class="contacts-list">
+            {% for item in contacts %}
+            <li>
+                <span>
+                    {{ item }}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
     </main>
-
-    <hr>
-
-    <footer>
-        <p>&copy; Все права защищены</p>
-    </footer>
-    </div>
-</body>
-</html>
+{% endblock %}
